@@ -19,7 +19,7 @@ import requests
 import numpy as np
 
 url = "https://en.wikipedia.org/wiki/Anscombe%27s_quartet"
-response = requests.get(url)
+response = requests.get(url, timeout=60)
 
 p = HTMLTableParser()
 p.feed(response.text)
